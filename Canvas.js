@@ -194,9 +194,14 @@ class Canvas extends Frames {
             this.restore();
         };
         drawing(Date.now());
+        ctx.author = "Yacine Sdoka";
         return ctx;
     }
 }
+Canvas.toString = function(){return "class Canvas { [Hidden Class] }";};
+Canvas.toString.toString = null;
+Frame.toString = function(){return "class Frame { [Hidden Class] }";};
+Frame.toString.toString = null;
 Math.floorTo = function(n, t=0){
     n = parseFloat(n);
     if(this.floor(n)===n||isNaN(t))return n;
